@@ -20,7 +20,7 @@ export class ProductsService {
     getProducts (): Observable<Product[]>{
       return this.http.get<Product[]>(this.inventoryURL)
         .pipe(
-          catchError(this.handleError('getProducts', []))
+          
         )
 
     }
