@@ -22,7 +22,7 @@ export class AuthService {
     return this.http.post<any>(this.loginURL, {user : username, pass : password}, httpOptions)
       .pipe(map(user => {
         if(user && user.token){
-        sessionStorage.setItem('currentUser', JSON.stringify(user.token))}
+        sessionStorage.setItem('token', JSON.stringify(user.token))}
       }))
   }
 

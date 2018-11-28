@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import { User }  from '../admin-model';
 import {AuthService} from '../auth.service'
-import {HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-auth',
@@ -14,7 +14,9 @@ export class AuthComponent implements OnInit {
   user : User
   private admin = [];
 
-  constructor(private authService : AuthService,
+  constructor(
+   
+    private authService : AuthService,
     private fb : FormBuilder) { }
 
   ngOnInit() {
