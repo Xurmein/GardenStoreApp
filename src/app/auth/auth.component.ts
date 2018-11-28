@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import { User }  from '../admin-model';
 import {AuthService} from '../auth.service'
 import {HttpClient} from '@angular/common/http';
@@ -9,13 +10,24 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
+  login : FormGroup
+  private admin = [];
 
-  admin = User;
-
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService,
+    private fb : FormBuilder) { }
 
   ngOnInit() {
-    this.authService
+    this.login = this.fb.group({
+      username: new FormControl(),
+      password: new FormControl()
+    })
   }
+  
 
+  onLogin(): void {
+    this.admin.push(this.login)
+    this.authService.login(this.admin[0].value).subscribe(
+      User => localStorage.setItem('token', User.token)
+    )
+  }
 }
