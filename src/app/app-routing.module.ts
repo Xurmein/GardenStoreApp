@@ -5,8 +5,9 @@ import { AuthComponent } from './auth/auth.component';
 import { ProductsComponent } from './products/products.component'
 
 const routes: Routes = [
+  {path : '', component: AuthComponent},
   { path: 'aboutus', component: AboutUsComponent },
-  { path: 'login', component: AuthComponent},
+  { path: 'login', component: AuthComponent },
   { path: 'products', component: ProductsComponent}
 
 ];

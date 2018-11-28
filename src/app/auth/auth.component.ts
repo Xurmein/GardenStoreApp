@@ -11,6 +11,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AuthComponent implements OnInit {
   login : FormGroup
+  user : User
   private admin = [];
 
   constructor(private authService : AuthService,
@@ -22,11 +23,11 @@ export class AuthComponent implements OnInit {
       password: new FormControl()
     })
   }
-  
+
 
   onLogin(): void {
     this.admin.push(this.login)
-    this.authService.login(this.admin[0].value).subscribe(
+    this.authService.login(this.admin[0].value, this.admin[1].value).subscribe(
       User => localStorage.setItem('token', User.token)
     )
   }

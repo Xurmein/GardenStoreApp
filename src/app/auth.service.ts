@@ -16,13 +16,18 @@ export class AuthService {
   private loginURL = 'https://efa-gardenapp-backend.herokuapp.com/api/auth/login';
   private deleteURL = 'https://efa-gardenapp-backend.herokuapp.com/api/product/:id'
   constructor(private http : HttpClient) { }
+  user : User
 
-  login (user : User): Observable<User>{
-    return this.http.post<User>(this.loginURL, user , httpOptions)
+  login (username : string, password : string) : any {
+    return this.http.post<any>(this.loginURL, {user : username, pass : password}, httpOptions)
+      .pipe(map(user => {
+        if(user && user.token){
+        sessionStorage.setItem('currentUser', JSON.stringify(user.token))}
+      }))
   }
 
-  deleteProduct (productid : number): Observable<Product[]>{
-    return this.http.delete<Product[]>(this.deleteURL)
-  }
+  // deleteProduct (productid : number): Observable<Product[]>{
+  //   return this.http.delete<Product[]>(this.deleteURL)
+  // }
 
 }
