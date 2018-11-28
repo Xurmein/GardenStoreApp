@@ -1,0 +1,11 @@
+.products {
+    color: white;
+    text-align: center;
+}
+
+.inventoryDiv {
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
