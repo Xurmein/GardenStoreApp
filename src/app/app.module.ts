@@ -9,6 +9,7 @@ import { AuthComponent } from './auth/auth.component';
 
 import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormBuilder } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
