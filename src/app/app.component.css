@@ -1,6 +1,7 @@
 h2 {
     color: #7F7E7E;
     text-align: center;
+    font-family: 'Special Elite', cursive;
     /* margin-left: 2em; */
 }
 
@@ -23,12 +24,25 @@ h2 {
 
 a {
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-right: 2em;
+    font-family: 'Rye', cursive;
+    margin-left: 2em;
+    
+}
+
+
+/* more space */
+
+.whitespace {
+    height: 2em;
 }
 
 
 p {
     color: white;
     text-align: center;
+
+}
+
+ul { 
+    height: 40px;
 }
