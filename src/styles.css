@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
+=======
+/* 
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; */
+
+body {
+    color: #000000;
+    background: #000000;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+
+}
+
+
+@font-face {
+    font-family: godfather;
+    src: url(../src/assets/Corleone.ttf);
+}
+>>>>>>> c54aa55bcdf7f061fa9969bdb4578150cc48c780
