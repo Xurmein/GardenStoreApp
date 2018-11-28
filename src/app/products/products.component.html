@@ -1,8 +1,8 @@
-<h2>GAJ Inventory</h2>
+<h2>Imported Inventory</h2>
 <div *ngIf="products !== null" class="inventoryDiv">
   <ul>
     <li *ngFor="let product of products">
-      <div>
+      <div class="products">
         <h4>{{product.product_name}}</h4>
         <p>{{product.product_description}}</p>
         <caption>{{product.product_price}}</caption>
